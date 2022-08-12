@@ -7,7 +7,7 @@ type ControlProps = {};
 const Controls: React.FC<ControlProps> = () => {
   const colors = useThemeColors();
   return (
-    <View style={[styles.container, styles.darken]}>
+    <View style={styles.container}>
       <Text style={{color: colors.primary}}>CONTROLS</Text>
     </View>
   );
@@ -18,8 +18,5 @@ export default Controls;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  darken: {
-    backgroundColor: '#00000021',
   },
 });

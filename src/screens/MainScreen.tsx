@@ -12,10 +12,6 @@ const Main: FC<NativeStackScreenProps<RootStackParamList>> = ({navigation}) => {
       <Text style={{color: colors.primary}}>
         Hello World! This is the main app screen
       </Text>
-      <Button
-        title="Settings Screen"
-        onPress={() => navigation.navigate('Settings')}
-      />
     </Layout>
   );
 };

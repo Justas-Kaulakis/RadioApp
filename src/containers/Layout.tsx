@@ -11,11 +11,11 @@ const Layout: FC<PropsWithChildren<LayoutProps>> = ({children}) => {
 
   return (
     <View style={[styles.body, {backgroundColor: colors.background}]}>
-      <View style={{flex: 1}}>
+      <View style={[{flex: 1}, styles.darken]}>
         <Header />
       </View>
       <View style={{flex: 3}}>{children}</View>
-      <View style={{flex: 1}}>
+      <View style={[{flex: 1}, styles.darken]}>
         <Controls />
       </View>
     </View>
@@ -28,5 +28,8 @@ const styles = StyleSheet.create({
   body: {
     flex: 1,
     flexDirection: 'column',
+  },
+  darken: {
+    backgroundColor: '#00000050',
   },
 });
