@@ -1,6 +1,9 @@
 import React, {FC} from 'react';
 import {NavigationContainer, DarkTheme} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {
+  createNativeStackNavigator,
+  NativeStackNavigationProp,
+} from '@react-navigation/native-stack';
 import MainScreen from '../screens/MainScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
@@ -8,6 +11,14 @@ export type RootStackParamList = {
   Main: undefined;
   Settings: undefined;
 };
+export type MainScreenNavigationProp = NativeStackNavigationProp<
+  RootStackParamList,
+  'Main'
+>;
+export type SettingsScreenNavigationProp = NativeStackNavigationProp<
+  RootStackParamList,
+  'Settings'
+>;
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 

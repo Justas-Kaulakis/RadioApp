@@ -77,9 +77,13 @@ import com.android.build.OutputFile
  * ]
  */
 
+
 project.ext.react = [
     enableHermes: false,  // clean and rebuild if changing
 ]
+// react native font awesome edit
+// https://github.com/oblador/react-native-vector-icons#android
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 
 apply from: "../../node_modules/react-native/react.gradle"
 
